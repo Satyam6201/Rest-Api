@@ -1,0 +1,12 @@
+h1{
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+.content {
+    color: rgb(20, 206, 206);
+}
+.container{
+    background-color:khaki;
+    font-style: italic;
+}

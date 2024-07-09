@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora App</title>
+</head>
+<link rel="icon" href="/REST_API/image.png">
+<link rel="stylesheet" href="/style.css">
+<body>
+    <!-- 1.Get REST -->
+    <h1>Quora Post</h1>
+    <% for( posts of posts ) { %>
+        <div class="container">
+            <h2 class="user"> @<%= posts.username %>  </h2>
+            <h2 class="content"><%=posts.content %> </h2>
+            <a href="http://localhost:8080/posts/<%= posts.id %>">See in details</a>
+            <a href="http://localhost:8080/posts/<%= posts.id %>/edit">Edit</a>
+            <form method="post" action="/posts/<%= posts.id %>?_method=DELETE">
+                <br>
+                <button>DELETE POST</button>
+            </form>
+        </div>
+    <% } %>
+
+    <br><br>
+
+    <a href="http://localhost:8080/post/new">Create New Post</a>
+        
+   
+</body>
+</html>
